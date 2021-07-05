@@ -6,6 +6,18 @@
         
         <h1>{{ $post->title}} </h1>
 
+        <h5>
+
+            Categoria:
+
+            @if ($post->category)
+                {{$post->category->name}}
+            @else
+                nessuna categoria
+            @endif
+
+        </h5>
+
         <p>{{ $post->content}}</p>
 
         <div>
