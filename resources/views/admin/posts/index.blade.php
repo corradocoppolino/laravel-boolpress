@@ -19,6 +19,8 @@
               <tr>
                 <th>ID</th>
                 <th>TITLE</th>
+                <th>TAGS</th>
+                <th>CATEGORIES</th>
                 <th colspan="3">ACTIONS</th>
               </tr>
             </thead>
@@ -30,6 +32,11 @@
                 <tr>
                   <th>{{$post->id}}</th>
                   <td>{{$post->title}}</td>
+                  <td>@forelse ($post->tags as $tag)
+                    <span class="badge badge-primary">{{$tag->name}}</span>
+                  @empty
+                    ---
+                  @endforelse</td>
                   <td>
                       @if ($post->category)
                         {{$post->category->name}}

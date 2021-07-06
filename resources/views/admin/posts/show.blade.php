@@ -18,6 +18,12 @@
 
         </h5>
 
+        <div>
+            @foreach ($post->tags as $tag)
+                <span class="badge badge-primary">{{$tag->name}}</span>
+            @endforeach
+        </div>
+
         <p>{{ $post->content}}</p>
 
         <div>
