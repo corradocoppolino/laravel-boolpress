@@ -6,6 +6,10 @@ import router from './routes';
 const app = new Vue({
     el: '#app',
     router,
+    about,
+    contact,
+    blog,
+    error404,
     render: h => h(App)
 });
 
