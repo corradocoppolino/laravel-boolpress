@@ -1,5 +1,11 @@
 <template>
-    <h1>siamo in vue</h1>
+    
+    <main class="container">
+
+        <router-view></router-view>
+
+    </main>
+
 </template>
 
 <script>
